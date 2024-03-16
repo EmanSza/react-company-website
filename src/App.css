@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap');
+
+:root {
+    --color-dark-primary: #03071E;
+    --color-dark-secondary: #370617;
+    --color-primary: #6A040F;
+    --color-primary-secondary: #9D0208;
+    --color-primary-tertiary: #D00000;
+    --color-primary-quaternary: #DC2F02;
+    --color-secondary: #F48C06;
+    --color-secondary-secondary: #FAA307;
+    --color-secondary-tertiary: #FFBA08;
+    --color-secondary-quaternary: #E85D04;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border: 2px var(--color-secondary) solid;
+    background-color: var(--color-secondary);
+    background-clip: padding-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px var(--color-primary) solid;
+    border-color: transparent;
+    background-color: var(--color-primary);
+    background-clip: padding-box;
 }
