@@ -13,7 +13,7 @@ function Nav() {
             <a href='#'>TEAM</a>
         </div>
         <div className='nav-contact nav-list'>
-            <a href='#'>Work With Us!</a>
+            <a href='#'>Get in Contact!</a>
         </div>
     </div>
   );

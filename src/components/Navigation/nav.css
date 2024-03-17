@@ -1,20 +1,24 @@
 .navigation {
+    display: flex;
+    justify-content: space-between; /* This will place the children at the start, center, and end */
+    align-items: center;
     height: 100px;
     width: 100%;
     background-color: var(--color-secondary-tertiary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     position: absolute;
-    
+    z-index: 100;
 }
+
 .nav-list {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin: 0 5vh;
+    
+}
+.logo, .nav-contact {
+    justify-content: center;
 }
 .logo img {
     height: 100px;
@@ -24,8 +28,9 @@
 .links {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 .links a {
     color: var(--color-dark-primary);
@@ -56,6 +61,7 @@
 .nav-contact a:hover {
     background-color: var(--color-secondary);
 }
+
 /* if 730px or left width */
 @media screen and (max-width: 730px) {
     .navigation .links {
