@@ -5,8 +5,8 @@
     height: 100px;
     width: 100%;
     background-color: var(--color-secondary-tertiary);
-    position: absolute;
-    z-index: 100;
+    position: fixed;
+    z-index: 101;
 }
 
 .nav-list {

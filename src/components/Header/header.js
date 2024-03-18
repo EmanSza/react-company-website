@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo} from 'react';
 import './header.css';
 import headerVideo from '../../video/test_header.mp4';
 
 function Header() {
-    const WORDS_IN_ARRAY = ['Gaming','Innovation', 'Community', 'Integrity', 'Artistry', 'Adventure', 'Challenge', 'Storytelling', 'Craftsmanship', 'Imagination', 'Unity'];
+    const WORDS_IN_ARRAY = useMemo(() => ['Gaming', 'Innovation', 'Community', 'Integrity', 'Artistry', 'Adventure', 'Challenge', 'Storytelling', 'Craftsmanship', 'Imagination', 'Unity'], []);
     const [displayedText, setDisplayedText] = useState('');
     const [currentWord, setCurrentWord] = useState(WORDS_IN_ARRAY[0]);
     const [showCursor, setShowCursor] = useState(true);
@@ -15,9 +15,14 @@ function Header() {
     // Typewriter Effect
     useEffect(() => {
         const cursorInterval = setInterval(() => {
-         
-            if (Date.now() - lastUpdate > 1000) {
-                setShowCursor(show => !show);
+            // Only toggle the visibility of the cursor when not adding letters (i.e., when either removing letters or idle)
+            if (!isRemoving && displayedText.length === currentWord.length) {
+                if (Date.now() - lastUpdate > 1000) {
+                    setShowCursor(show => !show);
+                }
+            } else {
+                // Ensure the cursor is visible while adding letters
+                setShowCursor(true);
             }
         }, 530);
 
@@ -47,7 +52,6 @@ function Header() {
                 }
                 if (newText !== prevText) {
                     setLastUpdate(Date.now());
-                    setShowCursor(true);
                 }
                 return newText;
             });
@@ -59,22 +63,21 @@ function Header() {
             clearInterval(cursorInterval);
             clearInterval(textUpdateInterval);
         };
-    }, [currentWord, isRemoving, textIndex, waitAfterAdding]);
-
+    }, [currentWord, isRemoving, textIndex, waitAfterAdding, displayedText.length, lastUpdate, WORDS_IN_ARRAY]);
+    console.log(showCursor)
     return (
         <div className="header">
             <div className='header-video'>
-                <video src={headerVideo} height={'100%'}autoPlay loop muted />
+                <video src={headerVideo} height={'100%'} autoPlay loop muted />
             </div>
             <div className='header-overlay'>
                 <div className='typewriter'>
                     <h1>Redefining <span className='word-span'>{displayedText}</span>{showCursor && '|'}<br />beyond mere profit</h1>
                 </div>
                 <div className='header-content'>
-                    <h2>Made by Gamers, for Gamers</h2>
+                    <h2>Games By Gamers, For Gamers</h2>
                 </div>
             </div>
-
         </div>
     );
 }
