@@ -68,7 +68,7 @@
 	align-content: stretch;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
-    transform: translateY(100%);
+    opacity: 0;
 }
 
 .content-overlay h3 {
@@ -87,9 +87,10 @@
     text-align: left;
 }
 .team-member:hover .content-overlay {
-    animation: slide 0.5s forwards;
+    animation: slideup 0.5s forwards;
+    opacity: 1;
 }
-@keyframes slide {
+@keyframes slideup {
     from { transform: translateY(100%); }
     to { transform: translateY(0%); } /* This might need to be adjusted based on total width */
 }
@@ -100,6 +101,7 @@
     }
     .content-overlay {
         transform: translateY(0%);
+        opacity: 1;
     }
     
 }
