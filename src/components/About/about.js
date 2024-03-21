@@ -16,10 +16,6 @@ function About() {
                     <div className='about-item-description'>
                         <p>Revitalizing the gaming industry, one game at a time. Our goal is to make games how they should be. For people to enjoy.</p>
                     </div>
-                    <div className='about-item-button'>
-                        <button>Learn More</button>
-                    </div>
-
                 </div>
                 <div className='about-item-image'>
                 </div>

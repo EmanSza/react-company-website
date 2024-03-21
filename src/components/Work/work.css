@@ -1,0 +1,43 @@
+.work {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    background-color: var(--color-secondary-tertiary);
+}
+
+.work-content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.image-carousel {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    animation: slide 30s linear infinite; /* Adjust time as needed */
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Adjust based on the total width of one set of images */
+}
+
+.com-logo {
+    min-width: 250px; /* Keep image width consistent */
+    height: 250px; /* Keep image height consistent */
+    object-fit: cover;
+    margin: 0 10px; /* Adjust spacing between images */
+}
+
+.placeholder-text {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
