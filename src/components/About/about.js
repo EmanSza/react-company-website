@@ -8,8 +8,7 @@ function About() {
             <h2>About Niohoggr Software</h2>
         </div>
         <div className='about-content'>
-            <div className='about-item'>
-                <div className='about-item-content'>
+            <div className='about-item-content'>
                     <div className='about-item-title'>
                         <h3>Our Mission</h3>
                     </div>
@@ -17,9 +16,7 @@ function About() {
                         <p>Revitalizing the gaming industry, one game at a time. Our goal is to make games how they should be. For people to enjoy.</p>
                     </div>
                 </div>
-                <div className='about-item-image'>
-                </div>
-            </div>
+            <div className='about-item-image'></div>
         </div>
     </div>
   );
