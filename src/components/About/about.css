@@ -64,7 +64,7 @@
 }
 .about-item-image {
     width: 65%;
-    min-width: 474px;
+    min-width: 480px;
     height: 100%;
     background-image: url('../../images/stock-image.jpg');
     background-size: cover;
@@ -89,7 +89,7 @@
 
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 755px) {
     .about-item-content {
         width: 100%;
         height: 50%;
@@ -104,5 +104,21 @@
         width: 100%;
         height: 50%;
     }
-
+    .about-header h2 {
+        font-size: 2rem;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .about-item-image {
+        /* remove */
+        display: none;
+    }
+    .about-item-content {
+        width: 100%;
+        height: 100%;
+    }
+    .about-content {
+        height: 50vh;
+    }
 }
