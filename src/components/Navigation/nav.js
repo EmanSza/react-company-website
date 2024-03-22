@@ -24,7 +24,8 @@ function Nav() {
             <a href='#team-section' onClick={scrollToSection}>TEAM</a>
         </div>
         <div className='nav-contact nav-list'>
-            <a href='#'>Get in Contact!</a>
+          {/* When clicked to bring up popup with contact list */}
+            <a href='#team-section'>Get in Contact!</a>
         </div>
     </div>
   );

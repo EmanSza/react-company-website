@@ -90,6 +90,7 @@
     width: 45%;
     height: 100%;
     padding: 1rem;
+    max-width: 340px;
 }
 .work-text p {
     color: var(--color-primary-secondary);
